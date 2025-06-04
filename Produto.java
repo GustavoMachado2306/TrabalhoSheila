@@ -22,6 +22,27 @@ public class Produto {
     public String getDescricao() { return descricao; }
     public double getPreco() { return preco; }
 
+    public void setNome(String nome) {
+        if (nome == null || nome.trim().isEmpty()) {
+            throw new IllegalArgumentException("Nome não pode ser nulo ou vazio");
+        }
+        this.nome = nome;
+    }
+
+    public void setDescricao(String descricao) {
+        if (descricao == null || descricao.trim().isEmpty()) {
+            throw new IllegalArgumentException("Descrição não pode ser nula ou vazia");
+        }
+        this.descricao = descricao;
+    }
+
+    public void setPreco(double preco) {
+        if (preco < 0) {
+            throw new IllegalArgumentException("Preço não pode ser negativo");
+        }
+        this.preco = preco;
+    }
+
     @Override
     public boolean equals(Object obj) {
         if (this == obj) return true;
