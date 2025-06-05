@@ -247,6 +247,12 @@ function mostrarSecao(secao) {
         case 'recomendacoes':
             atualizarRecomendacoes();
             break;
+        case 'estatisticas':
+            atualizarEstatisticas();
+            break;
+        case 'cadastro':
+            limparFormulario();
+            break;
     }
 }
 
@@ -496,6 +502,7 @@ function analisarProduto(id) {
                 <p class="preco">R$ ${produto.preco.toFixed(2)}</p>
                 <div class="acoes">
                     <button onclick="adicionarAoCarrinho('${produto.id}')">Adicionar ao Carrinho</button>
+                    <button onclick="excluirProduto('${produto.id}')" class="btn-excluir">Excluir</button>
                     <button onclick="voltarParaProdutos()">Voltar</button>
                 </div>
             </div>
@@ -508,6 +515,151 @@ function analisarProduto(id) {
 // Função para voltar à lista de produtos
 function voltarParaProdutos() {
     atualizarProdutos();
+}
+
+// Adicionar função de excluir produto
+function excluirProduto(id) {
+    const produto = produtosPrincipais.find(p => p.id === id);
+    if (produto) {
+        if (confirm(`Tem certeza que deseja excluir o produto "${produto.nome}"?`)) {
+            // Remove o produto da lista
+            const index = produtosPrincipais.findIndex(p => p.id === id);
+            if (index !== -1) {
+                produtosPrincipais.splice(index, 1);
+                // Remove do carrinho se estiver lá
+                carrinho = carrinho.filter(item => item.id !== id);
+                // Remove do histórico se estiver lá
+                historico = historico.filter(item => item.id !== id);
+                // Remove das recomendações se estiver lá
+                produtosAnalisadosRecomendacoes.delete(id);
+                
+                // Atualiza a interface
+                atualizarProdutos();
+                atualizarCarrinho();
+                atualizarHistorico();
+                atualizarRecomendacoes();
+                
+                alert('Produto excluído com sucesso!');
+            }
+        }
+    }
+}
+
+function atualizarEstatisticas() {
+    // Estatísticas de Produtos
+    const estatisticasProdutos = document.getElementById('estatisticas-produtos');
+    const categorias = {
+        'Notebooks': produtosPrincipais.filter(p => p.id.startsWith('NB')).length,
+        'Smartphones': produtosPrincipais.filter(p => p.id.startsWith('SP')).length,
+        'Tablets': produtosPrincipais.filter(p => p.id.startsWith('TB')).length,
+        'Smart TVs': produtosPrincipais.filter(p => p.id.startsWith('TV')).length,
+        'Fones de Ouvido': produtosPrincipais.filter(p => p.id.startsWith('FO')).length,
+        'Monitores': produtosPrincipais.filter(p => p.id.startsWith('MN')).length,
+        'Teclados e Mouses': produtosPrincipais.filter(p => p.id.startsWith('TM')).length,
+        'Impressoras': produtosPrincipais.filter(p => p.id.startsWith('IM')).length
+    };
+
+    let htmlProdutos = '';
+    for (const [categoria, quantidade] of Object.entries(categorias)) {
+        htmlProdutos += `
+            <div class="estatistica-item">
+                <strong>${categoria}:</strong>
+                <span class="estatistica-valor">${quantidade}</span>
+            </div>
+        `;
+    }
+    estatisticasProdutos.innerHTML = htmlProdutos;
+
+    // Estatísticas de Preços
+    const estatisticasPrecos = document.getElementById('estatisticas-precos');
+    const precos = produtosPrincipais.map(p => p.preco);
+    const precoMedio = precos.reduce((a, b) => a + b, 0) / precos.length;
+    const precoMinimo = Math.min(...precos);
+    const precoMaximo = Math.max(...precos);
+
+    estatisticasPrecos.innerHTML = `
+        <div class="estatistica-item">
+            <strong>Preço Médio:</strong>
+            <span class="estatistica-valor">R$ ${precoMedio.toFixed(2)}</span>
+        </div>
+        <div class="estatistica-item">
+            <strong>Preço Mínimo:</strong>
+            <span class="estatistica-valor">R$ ${precoMinimo.toFixed(2)}</span>
+        </div>
+        <div class="estatistica-item">
+            <strong>Preço Máximo:</strong>
+            <span class="estatistica-valor">R$ ${precoMaximo.toFixed(2)}</span>
+        </div>
+    `;
+
+    // Estatísticas do Carrinho
+    const estatisticasCarrinho = document.getElementById('estatisticas-carrinho');
+    const totalCarrinho = carrinho.reduce((total, item) => total + item.preco, 0);
+
+    estatisticasCarrinho.innerHTML = `
+        <div class="estatistica-item">
+            <strong>Quantidade de Itens:</strong>
+            <span class="estatistica-valor">${carrinho.length}</span>
+        </div>
+        <div class="estatistica-item">
+            <strong>Valor Total:</strong>
+            <span class="estatistica-valor">R$ ${totalCarrinho.toFixed(2)}</span>
+        </div>
+    `;
+
+    // Estatísticas do Histórico
+    const estatisticasHistorico = document.getElementById('estatisticas-historico');
+    const produtosUnicos = new Set(historico.map(item => item.id)).size;
+
+    estatisticasHistorico.innerHTML = `
+        <div class="estatistica-item">
+            <strong>Produtos Analisados:</strong>
+            <span class="estatistica-valor">${historico.length}</span>
+        </div>
+        <div class="estatistica-item">
+            <strong>Produtos Únicos:</strong>
+            <span class="estatistica-valor">${produtosUnicos}</span>
+        </div>
+    `;
+}
+
+function cadastrarProduto(event) {
+    event.preventDefault();
+    
+    const categoria = document.getElementById('categoria').value;
+    const nome = document.getElementById('nome').value;
+    const descricao = document.getElementById('descricao').value;
+    const preco = parseFloat(document.getElementById('preco').value);
+
+    // Gerar ID único baseado na categoria
+    const id = `${categoria}${Date.now()}`;
+
+    // Criar novo produto
+    const novoProduto = {
+        id,
+        nome,
+        descricao,
+        preco
+    };
+
+    // Adicionar à lista de produtos
+    produtosPrincipais.push(novoProduto);
+
+    // Limpar formulário
+    limparFormulario();
+
+    // Mostrar mensagem de sucesso
+    alert('Produto cadastrado com sucesso!');
+
+    // Atualizar a lista de produtos
+    atualizarProdutos();
+}
+
+function limparFormulario() {
+    document.getElementById('categoria').value = '';
+    document.getElementById('nome').value = '';
+    document.getElementById('descricao').value = '';
+    document.getElementById('preco').value = '';
 }
 
 // Inicialização
