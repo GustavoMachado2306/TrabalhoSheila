@@ -1,9 +1,9 @@
 // Dados iniciais
 const produtosPrincipais = [
     // Notebooks
-    { id: 'NB001', nome: "Notebook Dell i7", descricao: "Notebook Dell i7 16GB, 512GB SSD", preco: 4500.00 },
-    { id: 'NB002', nome: "Notebook MacBook Pro", descricao: "MacBook Pro M2 16GB, 512GB SSD", preco: 12000.00 },
-    { id: 'NB003', nome: "Notebook Lenovo", descricao: "Lenovo ThinkPad i5 8GB, 256GB SSD", preco: 3500.00 },
+    { id: 'NB001', nome: "Notebook Dell Inspiron", descricao: "Notebook Dell Inspiron i5 8GB 256GB SSD", preco: 3500.00 },
+    { id: 'NB002', nome: "Notebook Lenovo ThinkPad", descricao: "Notebook Lenovo ThinkPad i7 16GB 512GB SSD", preco: 4500.00 },
+    { id: 'NB003', nome: "Notebook MacBook Pro", descricao: "MacBook Pro M2 16GB, 512GB SSD", preco: 12000.00 },
     { id: 'NB004', nome: "Notebook HP", descricao: "HP Pavilion i5 8GB, 512GB SSD", preco: 3800.00 },
     { id: 'NB005', nome: "Notebook Asus ROG", descricao: "Asus ROG Strix G15, RTX 3060, 16GB RAM", preco: 8500.00 },
     { id: 'NB006', nome: "Notebook Acer Nitro", descricao: "Acer Nitro 5, GTX 1650, 8GB RAM", preco: 4200.00 },
@@ -11,8 +11,8 @@ const produtosPrincipais = [
     { id: 'NB008', nome: "Notebook Microsoft Surface", descricao: "Microsoft Surface Laptop 4, 13.5\", 8GB RAM", preco: 7800.00 },
 
     // Smartphones
-    { id: 'SP001', nome: "iPhone 13", descricao: "iPhone 13 128GB", preco: 5500.00 },
-    { id: 'SP002', nome: "Samsung S21", descricao: "Samsung Galaxy S21 128GB", preco: 4800.00 },
+    { id: 'SP001', nome: "iPhone 13", descricao: "iPhone 13 128GB Preto", preco: 5500.00 },
+    { id: 'SP002', nome: "Samsung Galaxy S21", descricao: "Samsung Galaxy S21 128GB Cinza", preco: 4800.00 },
     { id: 'SP003', nome: "Xiaomi 12", descricao: "Xiaomi 12 256GB", preco: 3500.00 },
     { id: 'SP004', nome: "Motorola Edge", descricao: "Motorola Edge 30 128GB", preco: 2800.00 },
     { id: 'SP005', nome: "iPhone 14 Pro", descricao: "iPhone 14 Pro 256GB", preco: 8500.00 },
@@ -21,8 +21,8 @@ const produtosPrincipais = [
     { id: 'SP008', nome: "OnePlus 11", descricao: "OnePlus 11 256GB", preco: 4500.00 },
 
     // Tablets
-    { id: 'TB001', nome: "iPad Pro", descricao: "iPad Pro 12.9 256GB", preco: 8000.00 },
-    { id: 'TB002', nome: "Samsung Tab S8", descricao: "Samsung Galaxy Tab S8 128GB", preco: 4500.00 },
+    { id: 'TB001', nome: "iPad Pro", descricao: "iPad Pro 12.9 256GB Wi-Fi", preco: 8000.00 },
+    { id: 'TB002', nome: "Samsung Galaxy Tab S8", descricao: "Samsung Galaxy Tab S8 128GB Wi-Fi", preco: 4500.00 },
     { id: 'TB003', nome: "iPad Air", descricao: "iPad Air 64GB", preco: 5000.00 },
     { id: 'TB004', nome: "Lenovo Tab", descricao: "Lenovo Tab P11 Pro 128GB", preco: 3000.00 },
     { id: 'TB005', nome: "iPad Mini", descricao: "iPad Mini 6 64GB", preco: 4200.00 },
@@ -42,7 +42,7 @@ const produtosPrincipais = [
 
     // Fones de Ouvido
     { id: 'FO001', nome: "AirPods Pro", descricao: "AirPods Pro com Cancelamento de Ruído", preco: 2000.00 },
-    { id: 'FO002', nome: "Sony WH-1000", descricao: "Sony WH-1000XM4", preco: 2500.00 },
+    { id: 'FO002', nome: "Sony WH-1000XM4", descricao: "Sony WH-1000XM4 com Cancelamento de Ruído", preco: 2500.00 },
     { id: 'FO003', nome: "Samsung Buds", descricao: "Samsung Galaxy Buds Pro", preco: 1500.00 },
     { id: 'FO004', nome: "JBL Tune", descricao: "JBL Tune 750BTNC", preco: 800.00 },
     { id: 'FO005', nome: "AirPods Max", descricao: "AirPods Max com Cancelamento de Ruído", preco: 4500.00 },
@@ -51,8 +51,8 @@ const produtosPrincipais = [
     { id: 'FO008', nome: "Bose QC45", descricao: "Bose QuietComfort 45", preco: 2800.00 },
 
     // Monitores
-    { id: 'MN001', nome: "Dell 27\"", descricao: "Dell 27\" 4K UHD", preco: 2500.00 },
-    { id: 'MN002', nome: "LG 32\"", descricao: "LG 32\" UltraWide", preco: 3000.00 },
+    { id: 'MN001', nome: "Dell 27\"", descricao: "Dell 27\" 4K UHD Monitor", preco: 2500.00 },
+    { id: 'MN002', nome: "LG 32\"", descricao: "LG 32\" UltraWide Monitor", preco: 3000.00 },
     { id: 'MN003', nome: "Samsung 24\"", descricao: "Samsung 24\" Full HD", preco: 1200.00 },
     { id: 'MN004', nome: "AOC 27\"", descricao: "AOC 27\" Gaming", preco: 1800.00 },
     { id: 'MN005', nome: "Dell 34\"", descricao: "Dell 34\" UltraWide QHD", preco: 4500.00 },
@@ -61,8 +61,8 @@ const produtosPrincipais = [
     { id: 'MN008', nome: "Asus 27\"", descricao: "Asus 27\" ROG Swift QHD", preco: 4200.00 },
 
     // Teclados e Mouses
-    { id: 'TM001', nome: "Logitech MX", descricao: "Logitech MX Keys", preco: 800.00 },
-    { id: 'TM002', nome: "Razer BlackWidow", descricao: "Razer BlackWidow V3", preco: 1200.00 },
+    { id: 'TM001', nome: "Logitech MX Keys", descricao: "Logitech MX Keys Teclado Sem Fio", preco: 800.00 },
+    { id: 'TM002', nome: "Razer BlackWidow", descricao: "Razer BlackWidow V3 Teclado Mecânico", preco: 1200.00 },
     { id: 'TM003', nome: "Logitech G Pro", descricao: "Logitech G Pro Mouse", preco: 600.00 },
     { id: 'TM004', nome: "HyperX Alloy", descricao: "HyperX Alloy Origins", preco: 900.00 },
     { id: 'TM005', nome: "Logitech MX Master", descricao: "Logitech MX Master 3S", preco: 850.00 },
@@ -71,8 +71,8 @@ const produtosPrincipais = [
     { id: 'TM008', nome: "SteelSeries Apex", descricao: "SteelSeries Apex Pro", preco: 1300.00 },
 
     // Impressoras
-    { id: 'IM001', nome: "HP LaserJet", descricao: "HP LaserJet Pro M404", preco: 1500.00 },
-    { id: 'IM002', nome: "Epson EcoTank", descricao: "Epson EcoTank L3250", preco: 1200.00 },
+    { id: 'IM001', nome: "HP LaserJet", descricao: "HP LaserJet Pro M404 Impressora", preco: 1500.00 },
+    { id: 'IM002', nome: "Epson EcoTank", descricao: "Epson EcoTank L3250 Impressora", preco: 1200.00 },
     { id: 'IM003', nome: "Canon PIXMA", descricao: "Canon PIXMA TS3350", preco: 800.00 },
     { id: 'IM004', nome: "Brother DCP", descricao: "Brother DCP-L2530DW", preco: 1300.00 },
     { id: 'IM005', nome: "HP OfficeJet", descricao: "HP OfficeJet Pro 9015", preco: 1800.00 },
@@ -497,6 +497,7 @@ function analisarProduto(id) {
         // Mostra detalhes do produto
         const detalhes = `
             <div class="produto-detalhes">
+                <div class="produto-id">ID: ${produto.id}</div>
                 <h2>${produto.nome}</h2>
                 <p class="descricao">${produto.descricao}</p>
                 <p class="preco">R$ ${produto.preco.toFixed(2)}</p>
@@ -660,6 +661,69 @@ function limparFormulario() {
     document.getElementById('nome').value = '';
     document.getElementById('descricao').value = '';
     document.getElementById('preco').value = '';
+}
+
+function exportarRelatorio() {
+    // Criar conteúdo do relatório
+    let conteudo = '=== RELATÓRIO DO SISTEMA ===\n\n';
+    
+    // Adicionar data e hora
+    const dataHora = new Date().toLocaleString('pt-BR');
+    conteudo += `Data e Hora: ${dataHora}\n\n`;
+    
+    // Estatísticas de Produtos
+    conteudo += '--- PRODUTOS ---\n';
+    const categorias = {
+        'Notebooks': produtosPrincipais.filter(p => p.id.startsWith('NB')),
+        'Smartphones': produtosPrincipais.filter(p => p.id.startsWith('SP')),
+        'Tablets': produtosPrincipais.filter(p => p.id.startsWith('TB')),
+        'Smart TVs': produtosPrincipais.filter(p => p.id.startsWith('TV')),
+        'Fones de Ouvido': produtosPrincipais.filter(p => p.id.startsWith('FO')),
+        'Monitores': produtosPrincipais.filter(p => p.id.startsWith('MN')),
+        'Teclados e Mouses': produtosPrincipais.filter(p => p.id.startsWith('TM')),
+        'Impressoras': produtosPrincipais.filter(p => p.id.startsWith('IM'))
+    };
+
+    for (const [categoria, produtos] of Object.entries(categorias)) {
+        conteudo += `\n${categoria} (${produtos.length} produtos):\n`;
+        produtos.forEach(produto => {
+            conteudo += `- ${produto.id}: ${produto.nome} - R$ ${produto.preco.toFixed(2)}\n`;
+        });
+    }
+
+    // Estatísticas do Carrinho
+    conteudo += '\n--- CARRINHO ---\n';
+    if (carrinho.length > 0) {
+        const totalCarrinho = carrinho.reduce((total, item) => total + item.preco, 0);
+        conteudo += `Total de itens: ${carrinho.length}\n`;
+        conteudo += `Valor total: R$ ${totalCarrinho.toFixed(2)}\n`;
+        carrinho.forEach(item => {
+            conteudo += `- ${item.id}: ${item.nome} - R$ ${item.preco.toFixed(2)}\n`;
+        });
+    } else {
+        conteudo += 'Carrinho vazio\n';
+    }
+
+    // Histórico de Produtos
+    conteudo += '\n--- HISTÓRICO ---\n';
+    if (historico.length > 0) {
+        historico.forEach(item => {
+            conteudo += `- ${item.id}: ${item.nome} (${item.horarioAnalise})\n`;
+        });
+    } else {
+        conteudo += 'Nenhum produto analisado\n';
+    }
+
+    // Criar e baixar o arquivo
+    const blob = new Blob([conteudo], { type: 'text/plain' });
+    const url = window.URL.createObjectURL(blob);
+    const a = document.createElement('a');
+    a.href = url;
+    a.download = `relatorio_${new Date().toISOString().slice(0,10)}.txt`;
+    document.body.appendChild(a);
+    a.click();
+    document.body.removeChild(a);
+    window.URL.revokeObjectURL(url);
 }
 
 // Inicialização

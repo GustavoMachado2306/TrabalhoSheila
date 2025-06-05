@@ -75,6 +75,13 @@ section {
     margin-bottom: 30px;
 }
 
+.categoria-section h2 {
+    color: #333;
+    margin-bottom: 15px;
+    padding-bottom: 10px;
+    border-bottom: 2px solid #007bff;
+}
+
 .categoria-header {
     display: flex;
     justify-content: space-between;
@@ -94,9 +101,9 @@ section {
 
 .produtos-grid {
     display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
     gap: 20px;
-    padding: 10px;
+    padding: 20px;
 }
 
 .produto-card {
@@ -104,7 +111,6 @@ section {
     padding: 20px;
     border-radius: 8px;
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-    margin-bottom: 20px;
     cursor: pointer;
     transition: all 0.3s ease;
 }
@@ -455,4 +461,15 @@ section {
 
 .btn-limpar:hover {
     background-color: #5a6268;
+}
+
+.produto-id {
+    background-color: #f8f9fa;
+    padding: 8px 12px;
+    border-radius: 4px;
+    color: #666;
+    font-family: monospace;
+    font-size: 14px;
+    margin-bottom: 15px;
+    display: inline-block;
 } 
