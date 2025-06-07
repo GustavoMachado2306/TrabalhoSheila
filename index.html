@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Sistema de Produtos</title>
     <link rel="stylesheet" href="styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
 </head>
 <body>
     <header>
@@ -29,6 +30,7 @@
             <h2>Carrinho de Compras</h2>
             <div id="carrinho-container"></div>
             <div id="carrinho-total"></div>
+            <div id="carrinho-total-valor"></div>
         </section>
 
         <section id="historico" style="display: none;">
@@ -42,10 +44,10 @@
         </section>
 
         <section id="estatisticas" style="display: none;">
-            <h2>Estatísticas do Sistema</h2>
-            <div class="estatisticas-grid">
+            <h2 class="estatisticas-titulo">Estatísticas do Sistema</h2>
+            <div class="estatisticas-section">
                 <div class="estatistica-card">
-                    <h3>Produtos</h3>
+                    <h3>Produtos por Categoria</h3>
                     <div id="estatisticas-produtos"></div>
                 </div>
                 <div class="estatistica-card">
@@ -63,45 +65,53 @@
             </div>
         </section>
 
-        <section id="cadastro" style="display: none;">
+        <section id="cadastro" class="cadastrar-section" style="display: none;">
             <h2>Cadastrar Novo Produto</h2>
-            <div class="cadastro-container">
-                <form id="form-cadastro" onsubmit="cadastrarProduto(event)">
-                    <div class="form-group">
-                        <label for="categoria">Categoria:</label>
-                        <select id="categoria" required>
-                            <option value="">Selecione uma categoria</option>
-                            <option value="NB">Notebook</option>
-                            <option value="SP">Smartphone</option>
-                            <option value="TB">Tablet</option>
-                            <option value="TV">Smart TV</option>
-                            <option value="FO">Fone de Ouvido</option>
-                            <option value="MN">Monitor</option>
-                            <option value="TM">Teclado e Mouse</option>
-                            <option value="IM">Impressora</option>
-                        </select>
-                    </div>
-                    <div class="form-group">
-                        <label for="nome">Nome do Produto:</label>
-                        <input type="text" id="nome" required>
-                    </div>
-                    <div class="form-group">
-                        <label for="descricao">Descrição:</label>
-                        <textarea id="descricao" required></textarea>
-                    </div>
-                    <div class="form-group">
-                        <label for="preco">Preço (R$):</label>
-                        <input type="number" id="preco" step="0.01" min="0" required>
-                    </div>
-                    <div class="form-actions">
-                        <button type="submit" class="btn-cadastrar">Cadastrar</button>
-                        <button type="button" onclick="limparFormulario()" class="btn-limpar">Limpar</button>
-                    </div>
-                </form>
-            </div>
+            <form class="cadastrar-form" id="form-cadastro" onsubmit="cadastrarProduto(event)">
+                <div class="form-group">
+                    <label for="nome">Nome do Produto</label>
+                    <input type="text" id="nome" name="nome" required>
+                </div>
+                <div class="form-group">
+                    <label for="descricao">Descrição</label>
+                    <textarea id="descricao" name="descricao" rows="3" required></textarea>
+                </div>
+                <div class="form-group">
+                    <label for="preco">Preço (R$)</label>
+                    <input type="number" id="preco" name="preco" min="0" step="0.01" required>
+                </div>
+                <div class="form-group">
+                    <label for="categoria">Categoria</label>
+                    <select id="categoria" name="categoria" required>
+                        <option value="">Selecione uma categoria</option>
+                        <option value="NB">Notebook</option>
+                        <option value="SP">Smartphone</option>
+                        <option value="TB">Tablet</option>
+                        <option value="TV">Smart TV</option>
+                        <option value="FO">Fone de Ouvido</option>
+                        <option value="MN">Monitor</option>
+                        <option value="TM">Teclado e Mouse</option>
+                        <option value="IM">Impressora</option>
+                    </select>
+                </div>
+                <div class="form-group">
+                    <label for="imagem">URL da Imagem</label>
+                    <input type="url" id="imagem" name="imagem">
+                </div>
+                
+                <div class="form-actions">
+                    <button type="submit" class="btn-cadastrar">Cadastrar</button>
+                    <button type="button" onclick="limparFormulario()" class="btn-limpar">Limpar</button>
+                </div>
+                <div class="mensagem-sucesso" style="display:none;">Produto cadastrado com sucesso!</div>
+                <div class="mensagem-erro" style="display:none;">Preencha todos os campos corretamente.</div>
+            </form>
         </section>
+
     </main>
 
+    <!-- Toast deve ficar fora do <main> -->
+    <div id="toast-notificacao" class="toast-notificacao"></div>
     <script src="script.js"></script>
 </body>
-</html> 
+</html>

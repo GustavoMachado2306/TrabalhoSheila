@@ -1,84 +1,84 @@
 // Dados iniciais
 const produtosPrincipais = [
     // Notebooks
-    { id: 'NB001', nome: "Notebook Dell Inspiron", descricao: "Notebook Dell Inspiron i5 8GB 256GB SSD", preco: 3500.00 },
-    { id: 'NB002', nome: "Notebook Lenovo ThinkPad", descricao: "Notebook Lenovo ThinkPad i7 16GB 512GB SSD", preco: 4500.00 },
-    { id: 'NB003', nome: "Notebook MacBook Pro", descricao: "MacBook Pro M2 16GB, 512GB SSD", preco: 12000.00 },
-    { id: 'NB004', nome: "Notebook HP", descricao: "HP Pavilion i5 8GB, 512GB SSD", preco: 3800.00 },
-    { id: 'NB005', nome: "Notebook Asus ROG", descricao: "Asus ROG Strix G15, RTX 3060, 16GB RAM", preco: 8500.00 },
-    { id: 'NB006', nome: "Notebook Acer Nitro", descricao: "Acer Nitro 5, GTX 1650, 8GB RAM", preco: 4200.00 },
-    { id: 'NB007', nome: "Notebook Samsung Book", descricao: "Samsung Book Pro 360, 13.3\", 8GB RAM", preco: 5500.00 },
-    { id: 'NB008', nome: "Notebook Microsoft Surface", descricao: "Microsoft Surface Laptop 4, 13.5\", 8GB RAM", preco: 7800.00 },
+    { id: 'NB001',nome: "Notebook Dell Inspiron", descricao: "Notebook Dell Inspiron i5 8GB 256GB SSD",preco: 3500.00,imagem: "https://images.unsplash.com/photo-1517336714731-489689fd1ca8?auto=format&fit=crop&w=600&q=80" },
+    { id: 'NB002', nome: "Notebook Lenovo ThinkPad", descricao: "Notebook Lenovo ThinkPad i7 16GB 512GB SSD", preco: 4500.00, imagem: "https://images.unsplash.com/photo-1496181133206-80ce9b88a853?q=80&w=2071&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" },
+    { id: 'NB003', nome: "Notebook MacBook Pro", descricao: "MacBook Pro M2 16GB, 512GB SSD", preco: 12000.00, imagem: "https://images.unsplash.com/photo-1498050108023-c5249f4df085?w=600&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Mnx8Y29tcHV0YURvciUyMHBlY3NvYWx8ZW58MHx8MHx8fDA%3D" },
+    { id: 'NB004', nome: "Notebook HP", descricao: "HP Pavilion i5 8GB, 512GB SSD", preco: 3800.00, imagem: "https://images.unsplash.com/photo-1537498425277-c283d32ef9db?w=600&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTJ8fGNvbXB1dGFkb3J8ZW58MHx8MHx8fDA%3D" },
+    { id: 'NB005', nome: "Notebook Asus ROG", descricao: "Asus ROG Strix G15, RTX 3060, 16GB RAM", preco: 8500.00, imagem: "https://plus.unsplash.com/premium_photo-1670274606895-f2dc713f8a90?w=600&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Mjd8fGNvbXB1dGFkb3J8ZW58MHx8MHx8fDA%3D" },
+    { id: 'NB006', nome: "Notebook Acer Nitro", descricao: "Acer Nitro 5, GTX 1650, 8GB RAM", preco: 4200.00, imagem: "https://plus.unsplash.com/premium_photo-1681666713641-8d722b681edc?w=600&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Mzl8fGNvbXB1dGFkb3J8ZW58MHx8MHx8fDA%3D" },
+    { id: 'NB007', nome: "Notebook Samsung Book", descricao: "Samsung Book Pro 360, 13.3\", 8GB RAM", preco: 5500.00, imagem: "https://images.unsplash.com/photo-1517694712202-14dd9538aa97?auto=format&fit=crop&w=600&q=80" },
+    { id: 'NB008', nome: "Notebook Microsoft Surface", descricao: "Microsoft Surface Laptop 4, 13.5\", 8GB RAM", preco: 7800.00, imagem: "https://plus.unsplash.com/premium_photo-1681302427948-2fd0eca629b1?q=80&w=1935&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" },
 
     // Smartphones
-    { id: 'SP001', nome: "iPhone 13", descricao: "iPhone 13 128GB Preto", preco: 5500.00 },
-    { id: 'SP002', nome: "Samsung Galaxy S21", descricao: "Samsung Galaxy S21 128GB Cinza", preco: 4800.00 },
-    { id: 'SP003', nome: "Xiaomi 12", descricao: "Xiaomi 12 256GB", preco: 3500.00 },
-    { id: 'SP004', nome: "Motorola Edge", descricao: "Motorola Edge 30 128GB", preco: 2800.00 },
-    { id: 'SP005', nome: "iPhone 14 Pro", descricao: "iPhone 14 Pro 256GB", preco: 8500.00 },
-    { id: 'SP006', nome: "Samsung S23", descricao: "Samsung Galaxy S23 Ultra 256GB", preco: 7500.00 },
-    { id: 'SP007', nome: "Google Pixel 7", descricao: "Google Pixel 7 Pro 128GB", preco: 5200.00 },
-    { id: 'SP008', nome: "OnePlus 11", descricao: "OnePlus 11 256GB", preco: 4500.00 },
+    { id: 'SP001', nome: "iPhone 13", descricao: "iPhone 13 128GB Preto", preco: 5500.00, imagem: "https://images.unsplash.com/photo-1511707171634-5f897ff02aa9?auto=format&fit=crop&w=600&q=80" },
+    { id: 'SP002', nome: "Samsung Galaxy S21", descricao: "Samsung Galaxy S21 128GB Cinza", preco: 4800.00, imagem: "https://images.unsplash.com/photo-1512499617640-c2f999098c01?auto=format&fit=crop&w=600&q=80" },
+    { id: 'SP003', nome: "Xiaomi 12", descricao: "Xiaomi 12 256GB", preco: 3500.00, imagem: "https://images.unsplash.com/photo-1510557880182-3c5a911cb3b7?auto=format&fit=crop&w=600&q=80" },
+    { id: 'SP004', nome: "Motorola Edge", descricao: "Motorola Edge 30 128GB", preco: 2800.00, imagem: "https://images.unsplash.com/photo-1517336714731-489689fd1ca8?auto=format&fit=crop&w=600&q=80" },
+    { id: 'SP005', nome: "iPhone 14 Pro", descricao: "iPhone 14 Pro 256GB", preco: 8500.00, imagem: "https://images.unsplash.com/photo-1519125323398-675f0ddb6308?auto=format&fit=crop&w=600&q=80" },
+    { id: 'SP006', nome: "Samsung S23", descricao: "Samsung Galaxy S23 Ultra 256GB", preco: 7500.00, imagem: "https://images.unsplash.com/photo-1512499617640-c2f999098c01?auto=format&fit=crop&w=600&q=80" },
+    { id: 'SP007', nome: "Google Pixel 7", descricao: "Google Pixel 7 Pro 128GB", preco: 5200.00, imagem: "https://images.unsplash.com/photo-1510557880182-3c5a911cb3b7?auto=format&fit=crop&w=600&q=80" },
+    { id: 'SP008', nome: "OnePlus 11", descricao: "OnePlus 11 256GB", preco: 4500.00, imagem: "https://images.unsplash.com/photo-1511707171634-5f897ff02aa9?auto=format&fit=crop&w=600&q=80" },
 
     // Tablets
-    { id: 'TB001', nome: "iPad Pro", descricao: "iPad Pro 12.9 256GB Wi-Fi", preco: 8000.00 },
-    { id: 'TB002', nome: "Samsung Galaxy Tab S8", descricao: "Samsung Galaxy Tab S8 128GB Wi-Fi", preco: 4500.00 },
-    { id: 'TB003', nome: "iPad Air", descricao: "iPad Air 64GB", preco: 5000.00 },
-    { id: 'TB004', nome: "Lenovo Tab", descricao: "Lenovo Tab P11 Pro 128GB", preco: 3000.00 },
-    { id: 'TB005', nome: "iPad Mini", descricao: "iPad Mini 6 64GB", preco: 4200.00 },
-    { id: 'TB006', nome: "Samsung Tab S9", descricao: "Samsung Galaxy Tab S9+ 256GB", preco: 6500.00 },
-    { id: 'TB007', nome: "Microsoft Surface Pro", descricao: "Microsoft Surface Pro 9 128GB", preco: 7800.00 },
-    { id: 'TB008', nome: "Xiaomi Pad 6", descricao: "Xiaomi Pad 6 Pro 256GB", preco: 3500.00 },
+    { id: 'TB001', nome: "iPad Pro", descricao: "iPad Pro 12.9 256GB Wi-Fi", preco: 8000.00, imagem: "https://images.unsplash.com/photo-1515378791036-0648a3ef77b2?auto=format&fit=crop&w=600&q=80" },
+    { id: 'TB002', nome: "Samsung Galaxy Tab S8", descricao: "Samsung Galaxy Tab S8 128GB Wi-Fi", preco: 4500.00, imagem: "https://images.unsplash.com/photo-1465101178521-c1a9136a3b99?auto=format&fit=crop&w=600&q=80" },
+    { id: 'TB003', nome: "iPad Air", descricao: "iPad Air 64GB", preco: 5000.00, imagem: "https://images.unsplash.com/photo-1465101046530-73398c7f28ca?auto=format&fit=crop&w=600&q=80" },
+    { id: 'TB004', nome: "Lenovo Tab", descricao: "Lenovo Tab P11 Pro 128GB", preco: 3000.00, imagem: "https://images.unsplash.com/photo-1519389950473-47ba0277781c?auto=format&fit=crop&w=600&q=80" },
+    { id: 'TB005', nome: "iPad Mini", descricao: "iPad Mini 6 64GB", preco: 4200.00, imagem: "https://images.unsplash.com/photo-1517694712202-14dd9538aa97?auto=format&fit=crop&w=600&q=80" },
+    { id: 'TB006', nome: "Samsung Tab S9", descricao: "Samsung Galaxy Tab S9+ 256GB", preco: 6500.00, imagem: "https://images.unsplash.com/photo-1515378791036-0648a3ef77b2?auto=format&fit=crop&w=600&q=80" },
+    { id: 'TB007', nome: "Microsoft Surface Pro", descricao: "Microsoft Surface Pro 9 128GB", preco: 7800.00, imagem: "https://images.unsplash.com/photo-1465101178521-c1a9136a3b99?auto=format&fit=crop&w=600&q=80" },
+    { id: 'TB008', nome: "Xiaomi Pad 6", descricao: "Xiaomi Pad 6 Pro 256GB", preco: 3500.00, imagem: "https://images.unsplash.com/photo-1519389950473-47ba0277781c?auto=format&fit=crop&w=600&q=80" },
 
     // Smart TVs
-    { id: 'TV001', nome: "Samsung 55\"", descricao: "Samsung 55\" 4K Smart TV", preco: 3500.00 },
-    { id: 'TV002', nome: "LG 65\"", descricao: "LG 65\" 4K Smart TV", preco: 4500.00 },
-    { id: 'TV003', nome: "Philips 50\"", descricao: "Philips 50\" 4K Smart TV", preco: 2800.00 },
-    { id: 'TV004', nome: "TCL 43\"", descricao: "TCL 43\" 4K Smart TV", preco: 2000.00 },
-    { id: 'TV005', nome: "Samsung 75\"", descricao: "Samsung 75\" QLED 4K Smart TV", preco: 8500.00 },
-    { id: 'TV006', nome: "LG 77\"", descricao: "LG 77\" OLED 4K Smart TV", preco: 12000.00 },
-    { id: 'TV007', nome: "Sony 65\"", descricao: "Sony 65\" BRAVIA OLED 4K", preco: 7800.00 },
-    { id: 'TV008', nome: "Philips 65\"", descricao: "Philips 65\" OLED 4K Smart TV", preco: 6500.00 },
+    { id: 'TV001', nome: "Samsung 55\"", descricao: "Samsung 55\" 4K Smart TV", preco: 3500.00, imagem: "https://images.unsplash.com/photo-1465101046530-73398c7f28ca?auto=format&fit=crop&w=600&q=80" },
+    { id: 'TV002', nome: "LG 65\"", descricao: "LG 65\" 4K Smart TV", preco: 4500.00, imagem: "https://images.unsplash.com/photo-1517694712202-14dd9538aa97?auto=format&fit=crop&w=600&q=80" },
+    { id: 'TV003', nome: "Philips 50\"", descricao: "Philips 50\" 4K Smart TV", preco: 2800.00, imagem: "https://images.unsplash.com/photo-1515378791036-0648a3ef77b2?auto=format&fit=crop&w=600&q=80" },
+    { id: 'TV004', nome: "TCL 43\"", descricao: "TCL 43\" 4K Smart TV", preco: 2000.00, imagem: "https://images.unsplash.com/photo-1519389950473-47ba0277781c?auto=format&fit=crop&w=600&q=80" },
+    { id: 'TV005', nome: "Samsung 75\"", descricao: "Samsung 75\" QLED 4K Smart TV", preco: 8500.00, imagem: "https://images.unsplash.com/photo-1511707171634-5f897ff02aa9?auto=format&fit=crop&w=600&q=80" },
+    { id: 'TV006', nome: "LG 77\"", descricao: "LG 77\" OLED 4K Smart TV", preco: 12000.00, imagem: "https://images.unsplash.com/photo-1512499617640-c2f999098c01?auto=format&fit=crop&w=600&q=80" },
+    { id: 'TV007', nome: "Sony 65\"", descricao: "Sony 65\" BRAVIA OLED 4K", preco: 7800.00, imagem: "https://images.unsplash.com/photo-1510557880182-3c5a911cb3b7?auto=format&fit=crop&w=600&q=80" },
+    { id: 'TV008', nome: "Philips 65\"", descricao: "Philips 65\" OLED 4K Smart TV", preco: 6500.00, imagem: "https://images.unsplash.com/photo-1519125323398-675f0ddb6308?auto=format&fit=crop&w=600&q=80" },
 
     // Fones de Ouvido
-    { id: 'FO001', nome: "AirPods Pro", descricao: "AirPods Pro com Cancelamento de Ruído", preco: 2000.00 },
-    { id: 'FO002', nome: "Sony WH-1000XM4", descricao: "Sony WH-1000XM4 com Cancelamento de Ruído", preco: 2500.00 },
-    { id: 'FO003', nome: "Samsung Buds", descricao: "Samsung Galaxy Buds Pro", preco: 1500.00 },
-    { id: 'FO004', nome: "JBL Tune", descricao: "JBL Tune 750BTNC", preco: 800.00 },
-    { id: 'FO005', nome: "AirPods Max", descricao: "AirPods Max com Cancelamento de Ruído", preco: 4500.00 },
-    { id: 'FO006', nome: "Sony WH-1000XM5", descricao: "Sony WH-1000XM5 com Cancelamento de Ruído", preco: 3200.00 },
-    { id: 'FO007', nome: "Samsung Buds2 Pro", descricao: "Samsung Galaxy Buds2 Pro", preco: 1800.00 },
-    { id: 'FO008', nome: "Bose QC45", descricao: "Bose QuietComfort 45", preco: 2800.00 },
+    { id: 'FO001', nome: "AirPods Pro", descricao: "AirPods Pro com Cancelamento de Ruído", preco: 2000.00, imagem: "https://images.unsplash.com/photo-1511707171634-5f897ff02aa9?auto=format&fit=crop&w=600&q=80" },
+    { id: 'FO002', nome: "Sony WH-1000XM4", descricao: "Sony WH-1000XM4 com Cancelamento de Ruído", preco: 2500.00, imagem: "https://images.unsplash.com/photo-1512499617640-c2f999098c01?auto=format&fit=crop&w=600&q=80" },
+    { id: 'FO003', nome: "Samsung Buds", descricao: "Samsung Galaxy Buds Pro", preco: 1500.00, imagem: "https://images.unsplash.com/photo-1510557880182-3c5a911cb3b7?auto=format&fit=crop&w=600&q=80" },
+    { id: 'FO004', nome: "JBL Tune", descricao: "JBL Tune 750BTNC", preco: 800.00, imagem: "https://images.unsplash.com/photo-1519125323398-675f0ddb6308?auto=format&fit=crop&w=600&q=80" },
+    { id: 'FO005', nome: "AirPods Max", descricao: "AirPods Max com Cancelamento de Ruído", preco: 4500.00, imagem: "https://images.unsplash.com/photo-1511707171634-5f897ff02aa9?auto=format&fit=crop&w=600&q=80" },
+    { id: 'FO006', nome: "Sony WH-1000XM5", descricao: "Sony WH-1000XM5 com Cancelamento de Ruído", preco: 3200.00, imagem: "https://images.unsplash.com/photo-1512499617640-c2f999098c01?auto=format&fit=crop&w=600&q=80" },
+    { id: 'FO007', nome: "Samsung Buds2 Pro", descricao: "Samsung Galaxy Buds2 Pro", preco: 1800.00, imagem: "https://images.unsplash.com/photo-1510557880182-3c5a911cb3b7?auto=format&fit=crop&w=600&q=80" },
+    { id: 'FO008', nome: "Bose QC45", descricao: "Bose QuietComfort 45", preco: 2800.00, imagem: "https://images.unsplash.com/photo-1519125323398-675f0ddb6308?auto=format&fit=crop&w=600&q=80" },
 
     // Monitores
-    { id: 'MN001', nome: "Dell 27\"", descricao: "Dell 27\" 4K UHD Monitor", preco: 2500.00 },
-    { id: 'MN002', nome: "LG 32\"", descricao: "LG 32\" UltraWide Monitor", preco: 3000.00 },
-    { id: 'MN003', nome: "Samsung 24\"", descricao: "Samsung 24\" Full HD", preco: 1200.00 },
-    { id: 'MN004', nome: "AOC 27\"", descricao: "AOC 27\" Gaming", preco: 1800.00 },
-    { id: 'MN005', nome: "Dell 34\"", descricao: "Dell 34\" UltraWide QHD", preco: 4500.00 },
-    { id: 'MN006', nome: "LG 38\"", descricao: "LG 38\" UltraWide QHD+", preco: 5800.00 },
-    { id: 'MN007', nome: "Samsung 32\"", descricao: "Samsung 32\" Odyssey G7 QHD", preco: 3500.00 },
-    { id: 'MN008', nome: "Asus 27\"", descricao: "Asus 27\" ROG Swift QHD", preco: 4200.00 },
+    { id: 'MN001', nome: "Dell 27\"", descricao: "Dell 27\" 4K UHD Monitor", preco: 2500.00, imagem: "https://images.unsplash.com/photo-1519389950473-47ba0277781c?auto=format&fit=crop&w=600&q=80" },
+    { id: 'MN002', nome: "LG 32\"", descricao: "LG 32\" UltraWide Monitor", preco: 3000.00, imagem: "https://images.unsplash.com/photo-1517694712202-14dd9538aa97?auto=format&fit=crop&w=600&q=80" },
+    { id: 'MN003', nome: "Samsung 24\"", descricao: "Samsung 24\" Full HD", preco: 1200.00, imagem: "https://images.unsplash.com/photo-1515378791036-0648a3ef77b2?auto=format&fit=crop&w=600&q=80" },
+    { id: 'MN004', nome: "AOC 27\"", descricao: "AOC 27\" Gaming", preco: 1800.00, imagem: "https://images.unsplash.com/photo-1465101046530-73398c7f28ca?auto=format&fit=crop&w=600&q=80" },
+    { id: 'MN005', nome: "Dell 34\"", descricao: "Dell 34\" UltraWide QHD", preco: 4500.00, imagem: "https://images.unsplash.com/photo-1519389950473-47ba0277781c?auto=format&fit=crop&w=600&q=80" },
+    { id: 'MN006', nome: "LG 38\"", descricao: "LG 38\" UltraWide QHD+", preco: 5800.00, imagem: "https://images.unsplash.com/photo-1517694712202-14dd9538aa97?auto=format&fit=crop&w=600&q=80" },
+    { id: 'MN007', nome: "Samsung 32\"", descricao: "Samsung 32\" Odyssey G7 QHD", preco: 3500.00, imagem: "https://images.unsplash.com/photo-1515378791036-0648a3ef77b2?auto=format&fit=crop&w=600&q=80" },
+    { id: 'MN008', nome: "Asus 27\"", descricao: "Asus 27\" ROG Swift QHD", preco: 4200.00, imagem: "https://images.unsplash.com/photo-1465101046530-73398c7f28ca?auto=format&fit=crop&w=600&q=80" },
 
     // Teclados e Mouses
-    { id: 'TM001', nome: "Logitech MX Keys", descricao: "Logitech MX Keys Teclado Sem Fio", preco: 800.00 },
-    { id: 'TM002', nome: "Razer BlackWidow", descricao: "Razer BlackWidow V3 Teclado Mecânico", preco: 1200.00 },
-    { id: 'TM003', nome: "Logitech G Pro", descricao: "Logitech G Pro Mouse", preco: 600.00 },
-    { id: 'TM004', nome: "HyperX Alloy", descricao: "HyperX Alloy Origins", preco: 900.00 },
-    { id: 'TM005', nome: "Logitech MX Master", descricao: "Logitech MX Master 3S", preco: 850.00 },
-    { id: 'TM006', nome: "Razer DeathAdder", descricao: "Razer DeathAdder V2 Pro", preco: 750.00 },
-    { id: 'TM007', nome: "Corsair K95", descricao: "Corsair K95 RGB Platinum", preco: 1100.00 },
-    { id: 'TM008', nome: "SteelSeries Apex", descricao: "SteelSeries Apex Pro", preco: 1300.00 },
+    { id: 'TM001', nome: "Logitech MX Keys", descricao: "Logitech MX Keys Teclado Sem Fio", preco: 800.00, imagem: "https://images.unsplash.com/photo-1511707171634-5f897ff02aa9?auto=format&fit=crop&w=600&q=80" },
+    { id: 'TM002', nome: "Razer BlackWidow", descricao: "Razer BlackWidow V3 Teclado Mecânico", preco: 1200.00, imagem: "https://images.unsplash.com/photo-1512499617640-c2f999098c01?auto=format&fit=crop&w=600&q=80" },
+    { id: 'TM003', nome: "Logitech G Pro", descricao: "Logitech G Pro Mouse", preco: 600.00, imagem: "https://images.unsplash.com/photo-1510557880182-3c5a911cb3b7?auto=format&fit=crop&w=600&q=80" },
+    { id: 'TM004', nome: "HyperX Alloy", descricao: "HyperX Alloy Origins", preco: 900.00, imagem: "https://images.unsplash.com/photo-1519125323398-675f0ddb6308?auto=format&fit=crop&w=600&q=80" },
+    { id: 'TM005', nome: "Logitech MX Master", descricao: "Logitech MX Master 3S", preco: 850.00, imagem: "https://images.unsplash.com/photo-1511707171634-5f897ff02aa9?auto=format&fit=crop&w=600&q=80" },
+    { id: 'TM006', nome: "Razer DeathAdder", descricao: "Razer DeathAdder V2 Pro", preco: 750.00, imagem: "https://images.unsplash.com/photo-1512499617640-c2f999098c01?auto=format&fit=crop&w=600&q=80" },
+    { id: 'TM007', nome: "Corsair K95", descricao: "Corsair K95 RGB Platinum", preco: 1100.00, imagem: "https://images.unsplash.com/photo-1510557880182-3c5a911cb3b7?auto=format&fit=crop&w=600&q=80" },
+    { id: 'TM008', nome: "SteelSeries Apex", descricao: "SteelSeries Apex Pro", preco: 1300.00, imagem: "https://images.unsplash.com/photo-1519125323398-675f0ddb6308?auto=format&fit=crop&w=600&q=80" },
 
     // Impressoras
-    { id: 'IM001', nome: "HP LaserJet", descricao: "HP LaserJet Pro M404 Impressora", preco: 1500.00 },
-    { id: 'IM002', nome: "Epson EcoTank", descricao: "Epson EcoTank L3250 Impressora", preco: 1200.00 },
-    { id: 'IM003', nome: "Canon PIXMA", descricao: "Canon PIXMA TS3350", preco: 800.00 },
-    { id: 'IM004', nome: "Brother DCP", descricao: "Brother DCP-L2530DW", preco: 1300.00 },
-    { id: 'IM005', nome: "HP OfficeJet", descricao: "HP OfficeJet Pro 9015", preco: 1800.00 },
-    { id: 'IM006', nome: "Epson WorkForce", descricao: "Epson WorkForce Pro WF-3720", preco: 950.00 },
-    { id: 'IM007', nome: "Canon MAXIFY", descricao: "Canon MAXIFY GX4020", preco: 1100.00 },
-    { id: 'IM008', nome: "Brother MFC", descricao: "Brother MFC-L8900CDW", preco: 2500.00 }
+    { id: 'IM001', nome: "HP LaserJet", descricao: "HP LaserJet Pro M404 Impressora", preco: 1500.00, imagem: "https://images.unsplash.com/photo-1519389950473-47ba0277781c?auto=format&fit=crop&w=600&q=80" },
+    { id: 'IM002', nome: "Epson EcoTank", descricao: "Epson EcoTank L3250 Impressora", preco: 1200.00, imagem: "https://images.unsplash.com/photo-1517694712202-14dd9538aa97?auto=format&fit=crop&w=600&q=80" },
+    { id: 'IM003', nome: "Canon PIXMA", descricao: "Canon PIXMA TS3350", preco: 800.00, imagem: "https://images.unsplash.com/photo-1515378791036-0648a3ef77b2?auto=format&fit=crop&w=600&q=80" },
+    { id: 'IM004', nome: "Brother DCP", descricao: "Brother DCP-L2530DW", preco: 1300.00, imagem: "https://images.unsplash.com/photo-1465101046530-73398c7f28ca?auto=format&fit=crop&w=600&q=80" },
+    { id: 'IM005', nome: "HP OfficeJet", descricao: "HP OfficeJet Pro 9015", preco: 1800.00, imagem: "https://images.unsplash.com/photo-1519389950473-47ba0277781c?auto=format&fit=crop&w=600&q=80" },
+    { id: 'IM006', nome: "Epson WorkForce", descricao: "Epson WorkForce Pro WF-3720", preco: 950.00, imagem: "https://images.unsplash.com/photo-1517694712202-14dd9538aa97?auto=format&fit=crop&w=600&q=80" },
+    { id: 'IM007', nome: "Canon MAXIFY", descricao: "Canon MAXIFY GX4020", preco: 1100.00, imagem: "https://images.unsplash.com/photo-1515378791036-0648a3ef77b2?auto=format&fit=crop&w=600&q=80" },
+    { id: 'IM008', nome: "Brother MFC", descricao: "Brother MFC-L8900CDW", preco: 2500.00, imagem: "https://images.unsplash.com/photo-1465101046530-73398c7f28ca?auto=format&fit=crop&w=600&q=80" }
 ];
 
 let carrinho = [];
@@ -152,7 +152,7 @@ const sistemaRecomendacoes = {
                 .map(produto => ({
                     ...produto,
                     categoria: categoria,
-                    preco: produto.preco * (0.8 + Math.random() * 0.4),
+                    preco: produto.preco, // <-- mantém o preço original
                     relevancia: this.calcularRelevancia(produto, historico)
                 }))
                 .sort((a, b) => b.relevancia - a.relevancia);
@@ -291,6 +291,7 @@ function atualizarProdutos() {
                 produtoCard.className = 'produto-card';
                 produtoCard.onclick = () => analisarProduto(produto.id);
                 produtoCard.innerHTML = `
+                    <img src="${produto.imagem || 'https://via.placeholder.com/150'}" alt="${produto.nome}" class="produto-imagem">
                     <h3>${produto.nome}</h3>
                     <p>${produto.descricao}</p>
                     <p class="preco">R$ ${produto.preco.toFixed(2)}</p>
@@ -306,27 +307,33 @@ function atualizarProdutos() {
 
 function atualizarCarrinho() {
     const container = document.getElementById('carrinho-container');
+    const totalDiv = document.getElementById('carrinho-total');
+    const totalValorDiv = document.getElementById('carrinho-total-valor');
+
+    if (!container || !totalDiv || !totalValorDiv) return;
+
     if (carrinho.length === 0) {
-        container.innerHTML = '<p>Seu carrinho está vazio.</p>';
-        document.getElementById('carrinho-total-valor').textContent = '0.00';
+        container.innerHTML = '<p style="text-align:center;color:#888;">Seu carrinho está vazio.</p>';
+        totalDiv.textContent = 'Total: R$ 0,00';
+        totalValorDiv.textContent = '';
         return;
     }
 
     container.innerHTML = carrinho.map(item => `
-        <div class="carrinho-item">
-            <div>
+        <div class="carrinho-item melhorado">
+            <img src="${item.imagem || 'https://via.placeholder.com/80'}" alt="${item.nome}" class="carrinho-imagem">
+            <div class="carrinho-info">
                 <h3>${item.nome}</h3>
                 <p>${item.descricao}</p>
-            </div>
-            <div>
                 <p class="preco">R$ ${item.preco.toFixed(2)}</p>
-                <button onclick="removerDoCarrinho('${item.id}')">Remover</button>
             </div>
+            <button class="btn-remover" onclick="removerDoCarrinho('${item.id}')">Remover</button>
         </div>
     `).join('');
 
     const total = carrinho.reduce((sum, item) => sum + item.preco, 0);
-    document.getElementById('carrinho-total-valor').textContent = total.toFixed(2);
+    totalDiv.textContent = `Total: R$ ${total.toFixed(2)}`;
+    totalValorDiv.textContent = `R$ ${total.toFixed(2)}`;
 }
 
 function atualizarHistorico() {
@@ -380,6 +387,7 @@ function atualizarRecomendacoes() {
                 <div class="produtos-grid">
                     ${produtos.map(produto => `
                         <div class="produto-card" onclick="analisarProdutoRecomendado('${produto.id}')">
+                            <img src="${produto.imagem || 'https://via.placeholder.com/150'}" alt="${produto.nome}" class="produto-imagem" style="height: 200px; object-fit: cover; border-radius: 8px 8px 0 0; margin-bottom: 8px;">
                             <div class="produto-header">
                                 <h3>${produto.nome}</h3>
                                 <span class="marca">${sistemaRecomendacoes.extrairMarca(produto.nome)}</span>
@@ -415,13 +423,17 @@ function analisarProdutoRecomendado(id) {
             });
             atualizarHistorico();
         }
+        // Mostra detalhes do produto, agora com imagem grande e botão de excluir
         const detalhes = `
             <div class="produto-detalhes">
+                <div class="produto-id">ID: ${produto.id}</div>
+                <img src="${produto.imagem || 'https://via.placeholder.com/300'}" alt="${produto.nome}" class="produto-imagem" style="margin-bottom:16px;max-width:100%;height:340px;object-fit:cover;border-radius:12px;">
                 <h2>${produto.nome}</h2>
                 <p class="descricao">${produto.descricao}</p>
                 <p class="preco">R$ ${produto.preco.toFixed(2)}</p>
                 <div class="acoes">
                     <button onclick="adicionarAoCarrinho('${produto.id}')">Adicionar ao Carrinho</button>
+                    <button onclick="excluirProduto('${produto.id}')" class="btn-excluir">Excluir</button>
                     <button onclick="voltarParaRecomendacoes()">Voltar</button>
                 </div>
             </div>
@@ -439,33 +451,17 @@ function adicionarAoCarrinho(id) {
     const produto = produtosPrincipais.find(p => p.id === id);
     if (produto) {
         carrinho.push(produto);
-        produtosAnalisadosRecomendacoes.delete(produto.id);
-        
-        if (!historico.some(item => item.id === produto.id)) {
-            const dataHora = new Date();
-            const horarioFormatado = dataHora.toLocaleString('pt-BR', {
-                day: '2-digit',
-                month: '2-digit',
-                year: 'numeric',
-                hour: '2-digit',
-                minute: '2-digit'
-            });
-            
-            historico.unshift({
-                ...produto,
-                horarioAnalise: horarioFormatado
-            });
-        }
         atualizarCarrinho();
-        atualizarHistorico();
-        alert('Produto adicionado ao carrinho!');
+        atualizarEstatisticas();
+        mostrarToast('Produto adicionado ao carrinho!');
+        // Remova o setTimeout e o voltarParaProdutos();
     }
 }
 
 function removerDoCarrinho(id) {
     carrinho = carrinho.filter(item => item.id !== id);
     atualizarCarrinho();
-    alert('Produto removido do carrinho!');
+    mostrarToast('Produto removido do carrinho!');
 }
 
 function gerarRecomendacoes() {
@@ -476,6 +472,13 @@ function gerarRecomendacoes() {
 function analisarProduto(id) {
     const produto = produtosPrincipais.find(p => p.id === id);
     if (produto) {
+        // Esconde todas as seções
+        document.querySelectorAll('main section').forEach(s => {
+            s.style.display = 'none';
+        });
+        // Mostra só o container de produtos
+        document.getElementById('produtos').style.display = 'block';
+
         // Adiciona ao histórico se ainda não estiver lá
         if (!historico.some(item => item.id === produto.id)) {
             const dataHora = new Date();
@@ -486,18 +489,20 @@ function analisarProduto(id) {
                 hour: '2-digit',
                 minute: '2-digit'
             });
-            
+
             historico.unshift({
                 ...produto,
                 horarioAnalise: horarioFormatado
             });
             atualizarHistorico();
+            atualizarEstatisticas();
         }
-        
+
         // Mostra detalhes do produto
         const detalhes = `
             <div class="produto-detalhes">
                 <div class="produto-id">ID: ${produto.id}</div>
+                <img src="${produto.imagem || 'https://via.placeholder.com/300'}" alt="${produto.nome}" class="produto-imagem" style="margin-bottom:16px;max-width:100%;height:400px;object-fit:cover;border-radius:12px;">
                 <h2>${produto.nome}</h2>
                 <p class="descricao">${produto.descricao}</p>
                 <p class="preco">R$ ${produto.preco.toFixed(2)}</p>
@@ -508,13 +513,18 @@ function analisarProduto(id) {
                 </div>
             </div>
         `;
-        
         document.getElementById('produtos-container').innerHTML = detalhes;
     }
 }
 
 // Função para voltar à lista de produtos
 function voltarParaProdutos() {
+    // Esconde todas as seções
+    document.querySelectorAll('main section').forEach(s => {
+        s.style.display = 'none';
+    });
+    // Mostra só a seção de produtos
+    document.getElementById('produtos').style.display = 'block';
     atualizarProdutos();
 }
 
@@ -547,93 +557,93 @@ function excluirProduto(id) {
 }
 
 function atualizarEstatisticas() {
-    // Estatísticas de Produtos
+    // Produtos por categoria
     const estatisticasProdutos = document.getElementById('estatisticas-produtos');
-    const categorias = {
-        'Notebooks': produtosPrincipais.filter(p => p.id.startsWith('NB')).length,
-        'Smartphones': produtosPrincipais.filter(p => p.id.startsWith('SP')).length,
-        'Tablets': produtosPrincipais.filter(p => p.id.startsWith('TB')).length,
-        'Smart TVs': produtosPrincipais.filter(p => p.id.startsWith('TV')).length,
-        'Fones de Ouvido': produtosPrincipais.filter(p => p.id.startsWith('FO')).length,
-        'Monitores': produtosPrincipais.filter(p => p.id.startsWith('MN')).length,
-        'Teclados e Mouses': produtosPrincipais.filter(p => p.id.startsWith('TM')).length,
-        'Impressoras': produtosPrincipais.filter(p => p.id.startsWith('IM')).length
-    };
+    if (estatisticasProdutos) {
+        const categorias = {
+            'Notebooks': produtosPrincipais.filter(p => p.id.startsWith('NB')).length,
+            'Smartphones': produtosPrincipais.filter(p => p.id.startsWith('SP')).length,
+            'Tablets': produtosPrincipais.filter(p => p.id.startsWith('TB')).length,
+            'Smart TVs': produtosPrincipais.filter(p => p.id.startsWith('TV')).length,
+            'Fones de Ouvido': produtosPrincipais.filter(p => p.id.startsWith('FO')).length,
+            'Monitores': produtosPrincipais.filter(p => p.id.startsWith('MN')).length,
+            'Teclados e Mouses': produtosPrincipais.filter(p => p.id.startsWith('TM')).length,
+            'Impressoras': produtosPrincipais.filter(p => p.id.startsWith('IM')).length
+        };
 
-    let htmlProdutos = '';
-    for (const [categoria, quantidade] of Object.entries(categorias)) {
-        htmlProdutos += `
+        let htmlProdutos = '';
+        for (const [categoria, quantidade] of Object.entries(categorias)) {
+            htmlProdutos += `
+                <div class="estatistica-item">
+                    <strong>${categoria}:</strong>
+                    <span class="estatistica-valor">${quantidade}</span>
+                </div>
+            `;
+        }
+        estatisticasProdutos.innerHTML = htmlProdutos;
+    }
+
+    // Preços
+    const estatisticasPrecos = document.getElementById('estatisticas-precos');
+    if (estatisticasPrecos) {
+        const precos = produtosPrincipais.map(p => p.preco);
+        const precoMedio = precos.reduce((a, b) => a + b, 0) / precos.length;
+        const precoMinimo = Math.min(...precos);
+        const precoMaximo = Math.max(...precos);
+
+        estatisticasPrecos.innerHTML = `
             <div class="estatistica-item">
-                <strong>${categoria}:</strong>
-                <span class="estatistica-valor">${quantidade}</span>
+                <strong>Preço Médio:</strong>
+                <span class="estatistica-valor">R$ ${precoMedio.toFixed(2)}</span>
+            </div>
+            <div class="estatistica-item">
+                <strong>Preço Mínimo:</strong>
+                <span class="estatistica-valor">R$ ${precoMinimo.toFixed(2)}</span>
+            </div>
+            <div class="estatistica-item">
+                <strong>Preço Máximo:</strong>
+                <span class="estatistica-valor">R$ ${precoMaximo.toFixed(2)}</span>
             </div>
         `;
     }
-    estatisticasProdutos.innerHTML = htmlProdutos;
 
-    // Estatísticas de Preços
-    const estatisticasPrecos = document.getElementById('estatisticas-precos');
-    const precos = produtosPrincipais.map(p => p.preco);
-    const precoMedio = precos.reduce((a, b) => a + b, 0) / precos.length;
-    const precoMinimo = Math.min(...precos);
-    const precoMaximo = Math.max(...precos);
-
-    estatisticasPrecos.innerHTML = `
-        <div class="estatistica-item">
-            <strong>Preço Médio:</strong>
-            <span class="estatistica-valor">R$ ${precoMedio.toFixed(2)}</span>
-        </div>
-        <div class="estatistica-item">
-            <strong>Preço Mínimo:</strong>
-            <span class="estatistica-valor">R$ ${precoMinimo.toFixed(2)}</span>
-        </div>
-        <div class="estatistica-item">
-            <strong>Preço Máximo:</strong>
-            <span class="estatistica-valor">R$ ${precoMaximo.toFixed(2)}</span>
-        </div>
-    `;
-
-    // Estatísticas do Carrinho
+    // Carrinho
     const estatisticasCarrinho = document.getElementById('estatisticas-carrinho');
-    const totalCarrinho = carrinho.reduce((total, item) => total + item.preco, 0);
+    if (estatisticasCarrinho) {
+        const totalCarrinho = carrinho.reduce((total, item) => total + item.preco, 0);
+        estatisticasCarrinho.innerHTML = `
+            <div class="estatistica-item">
+                <strong>Quantidade de Itens:</strong>
+                <span class="estatistica-valor">${carrinho.length}</span>
+            </div>
+            <div class="estatistica-item">
+                <strong>Valor Total:</strong>
+                <span class="estatistica-valor">R$ ${totalCarrinho.toFixed(2)}</span>
+            </div>
+        `;
+    }
 
-    estatisticasCarrinho.innerHTML = `
-        <div class="estatistica-item">
-            <strong>Quantidade de Itens:</strong>
-            <span class="estatistica-valor">${carrinho.length}</span>
-        </div>
-        <div class="estatistica-item">
-            <strong>Valor Total:</strong>
-            <span class="estatistica-valor">R$ ${totalCarrinho.toFixed(2)}</span>
-        </div>
-    `;
-
-    // Estatísticas do Histórico
+    // Histórico
     const estatisticasHistorico = document.getElementById('estatisticas-historico');
-    const produtosUnicos = new Set(historico.map(item => item.id)).size;
-
-    estatisticasHistorico.innerHTML = `
-        <div class="estatistica-item">
-            <strong>Produtos Analisados:</strong>
-            <span class="estatistica-valor">${historico.length}</span>
-        </div>
-        <div class="estatistica-item">
-            <strong>Produtos Únicos:</strong>
-            <span class="estatistica-valor">${produtosUnicos}</span>
-        </div>
-    `;
+    if (estatisticasHistorico) {
+        estatisticasHistorico.innerHTML = `
+            <div class="estatistica-item">
+                <strong>Produtos analisados:</strong>
+                <span class="estatistica-valor">${historico.length}</span>
+            </div>
+        `;
+    }
 }
 
 function cadastrarProduto(event) {
     event.preventDefault();
-    
-    const categoria = document.getElementById('categoria').value;
+
     const nome = document.getElementById('nome').value;
     const descricao = document.getElementById('descricao').value;
     const preco = parseFloat(document.getElementById('preco').value);
 
-    // Gerar ID único baseado na categoria
-    const id = `${categoria}${Date.now()}`;
+    // Gerar ID único
+    const id = `PROD${Date.now()}`;
 
     // Criar novo produto
     const novoProduto = {
@@ -643,21 +653,14 @@ function cadastrarProduto(event) {
         preco
     };
 
-    // Adicionar à lista de produtos
     produtosPrincipais.push(novoProduto);
-
-    // Limpar formulário
     limparFormulario();
-
-    // Mostrar mensagem de sucesso
     alert('Produto cadastrado com sucesso!');
-
-    // Atualizar a lista de produtos
     atualizarProdutos();
+    atualizarEstatisticas();
 }
 
 function limparFormulario() {
-    document.getElementById('categoria').value = '';
     document.getElementById('nome').value = '';
     document.getElementById('descricao').value = '';
     document.getElementById('preco').value = '';
@@ -729,6 +732,168 @@ function exportarRelatorio() {
 // Inicialização
 document.addEventListener('DOMContentLoaded', () => {
     atualizarProdutos();
+    atualizarEstatisticas();
     // Mostra a seção de produtos por padrão
     mostrarSecao('produtos');
-}); 
+});
+
+function atualizarEstatisticas() {
+    // Produtos por categoria
+    const estatisticasProdutos = document.getElementById('estatisticas-produtos');
+    if (estatisticasProdutos) {
+        const categorias = {
+            'Notebooks': produtosPrincipais.filter(p => p.id.startsWith('NB')).length,
+            'Smartphones': produtosPrincipais.filter(p => p.id.startsWith('SP')).length,
+            'Tablets': produtosPrincipais.filter(p => p.id.startsWith('TB')).length,
+            'Smart TVs': produtosPrincipais.filter(p => p.id.startsWith('TV')).length,
+            'Fones de Ouvido': produtosPrincipais.filter(p => p.id.startsWith('FO')).length,
+            'Monitores': produtosPrincipais.filter(p => p.id.startsWith('MN')).length,
+            'Teclados e Mouses': produtosPrincipais.filter(p => p.id.startsWith('TM')).length,
+            'Impressoras': produtosPrincipais.filter(p => p.id.startsWith('IM')).length
+        };
+
+        let htmlProdutos = '';
+        for (const [categoria, quantidade] of Object.entries(categorias)) {
+            htmlProdutos += `
+                <div class="estatistica-item">
+                    <strong>${categoria}:</strong>
+                    <span class="estatistica-valor">${quantidade}</span>
+                </div>
+            `;
+        }
+        estatisticasProdutos.innerHTML = htmlProdutos;
+    }
+
+    // Preços
+    const estatisticasPrecos = document.getElementById('estatisticas-precos');
+    if (estatisticasPrecos) {
+        const precos = produtosPrincipais.map(p => p.preco);
+        const precoMedio = precos.reduce((a, b) => a + b, 0) / precos.length;
+        const precoMinimo = Math.min(...precos);
+        const precoMaximo = Math.max(...precos);
+
+        estatisticasPrecos.innerHTML = `
+            <div class="estatistica-item">
+                <strong>Preço Médio:</strong>
+                <span class="estatistica-valor">R$ ${precoMedio.toFixed(2)}</span>
+            </div>
+            <div class="estatistica-item">
+                <strong>Preço Mínimo:</strong>
+                <span class="estatistica-valor">R$ ${precoMinimo.toFixed(2)}</span>
+            </div>
+            <div class="estatistica-item">
+                <strong>Preço Máximo:</strong>
+                <span class="estatistica-valor">R$ ${precoMaximo.toFixed(2)}</span>
+            </div>
+        `;
+    }
+
+    // Carrinho
+    const estatisticasCarrinho = document.getElementById('estatisticas-carrinho');
+    if (estatisticasCarrinho) {
+        const totalCarrinho = carrinho.reduce((total, item) => total + item.preco, 0);
+        estatisticasCarrinho.innerHTML = `
+            <div class="estatistica-item">
+                <strong>Quantidade de Itens:</strong>
+                <span class="estatistica-valor">${carrinho.length}</span>
+            </div>
+            <div class="estatistica-item">
+                <strong>Valor Total:</strong>
+                <span class="estatistica-valor">R$ ${totalCarrinho.toFixed(2)}</span>
+            </div>
+        `;
+    }
+
+    // Histórico
+    const estatisticasHistorico = document.getElementById('estatisticas-historico');
+    if (estatisticasHistorico) {
+        estatisticasHistorico.innerHTML = `
+            <div class="estatistica-item">
+                <strong>Produtos analisados:</strong>
+                <span class="estatistica-valor">${historico.length}</span>
+            </div>
+        `;
+    }
+}
+
+// Certifique-se de chamar esta função sempre que o histórico for modificado
+function adicionarAoHistorico(produto) {
+    historico.push(produto);
+    atualizarEstatisticas();
+}
+
+// Atualiza a contagem de itens no carrinho na estatística
+function atualizarEstatisticaCarrinho() {
+    const estatisticasCarrinhoItens = document.getElementById('estatisticas-carrinho-itens');
+    const estatisticasCarrinhoTotal = document.getElementById('estatisticas-carrinho-total');
+    estatisticasCarrinhoItens.textContent = carrinho.length;
+    
+    const totalCarrinho = carrinho.reduce((total, item) => total + item.preco, 0);
+    estatisticasCarrinhoTotal.textContent = `Total: R$ ${totalCarrinho.toFixed(2)}`;
+}
+
+// Chame esta função sempre que um produto for adicionado ou removido do carrinho
+function atualizarEstatisticasCarrinho() {
+    atualizarEstatisticaCarrinho();
+    // Você pode adicionar outras estatísticas relacionadas ao carrinho aqui, se necessário
+}
+
+// Exemplo de uso: adicionar um produto ao carrinho
+function adicionarProdutoExemplo() {
+    const produtoExemplo = produtosPrincipais[0]; // Pegando o primeiro produto como exemplo
+    adicionarAoCarrinho(produtoExemplo.id);
+    alert(`Produto ${produtoExemplo.nome} adicionado ao carrinho!`);
+}
+
+// Exemplo de uso: remover um produto do carrinho
+function removerProdutoExemplo() {
+    const produtoExemplo = carrinho[0]; // Pegando o primeiro produto do carrinho como exemplo
+    removerDoCarrinho(produtoExemplo.id);
+    alert(`Produto ${produtoExemplo.nome} removido do carrinho!`);
+}
+
+// Exemplo de uso: gerar relatório
+function gerarRelatorioExemplo() {
+    exportarRelatorio();
+    alert('Relatório gerado e baixado com sucesso!');
+}
+
+// Exemplo de uso: cadastrar um novo produto
+function cadastrarProdutoExemplo() {
+    const novoProduto = {
+        id: 'PROD' + Date.now(),
+        nome: 'Produto Exemplo',
+        descricao: 'Descrição do Produto Exemplo',
+        preco: 100.00,
+        imagem: 'https://via.placeholder.com/150'
+    };
+
+    produtosPrincipais.push(novoProduto);
+    alert('Produto cadastrado com sucesso!');
+    atualizarProdutos();
+    atualizarEstatisticas();
+}
+
+// Exemplo de uso: excluir um produto (usando o ID do primeiro produto como exemplo)
+function excluirProdutoExemplo() {
+    const produtoId = produtosPrincipais[0].id;
+    excluirProduto(produtoId);
+}
+
+// Adicionei um exemplo de uso para cada função importante, agora você pode testar cada uma delas individualmente
+// Basta descomentar a função desejada e chamá-la no console do navegador, por exemplo:
+
+// adicionarProdutoExemplo();
+// removerProdutoExemplo();
+// gerarRelatorioExemplo();
+// cadastrarProdutoExemplo();
+// excluirProdutoExemplo();
+
+function mostrarToast(mensagem) {
+    const toast = document.getElementById('toast-notificacao');
+    toast.textContent = mensagem;
+    toast.classList.add('mostrar');
+    setTimeout(() => {
+        toast.classList.remove('mostrar');
+    }, 2500);
+}
